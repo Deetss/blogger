@@ -12,10 +12,10 @@
     <p class="flash"><%= flash.notice %></p>
     <div id="container">
       <div id="content">
+        <%= yield %>
         <% if @articles.length == 0 %>
         <p>There aren\'t any articles to show</p>
         <% end %>
-        <%= yield %>
         <hr>
         <h6>
           <% if logged_in? %>
