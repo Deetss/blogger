@@ -1,5 +1,7 @@
 <h1>All Articles</h1>
-
+<% if @articles.length == 0 %>
+<p>There aren\'t any articles to show</p>
+<% end %>
 <ul id="articles">
     <% @articles.each do |article| %>
       <li>
