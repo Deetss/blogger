@@ -6,6 +6,8 @@ class CommentsController < ApplicationController
 
     flash.notice = "Your comment has been submited!"
 
+    before_filter :require_login, except: [:create]
+    
     redirect_to article_path(@comment.article)
   end
 
